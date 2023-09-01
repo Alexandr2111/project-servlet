@@ -60,9 +60,6 @@ public class LogicServlet extends HttpServlet {
         resp.sendRedirect("/index.jsp");
     }
 
-    /**
-     * Метод проверяет, нет ли трех крестиков/ноликов в ряд.
-     */
     private boolean checkWin(HttpServletResponse response, HttpSession currentSession, Field field) throws IOException {
         Sign winner = field.checkWin();
         if (Sign.CROSS == winner || Sign.NOUGHT == winner) {
